@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>RSS Reader</title>
+
+  <script src="static/lib/alpinejs/3.13.0/cdn.min.js" defer></script>
+  <script src="static/lib/rss-parser/3.13.0/cdn.min.js"></script>
 </head>
 <body>
-  <h1>Hello, Galaxy!</h1>
+  <h1>RSS Reader</h1>
+
+  <div x-data="rss">
+    <template x-for="entry in entries">
+      <div>
+        <h3 x-text="entry.title"></h3>
+        <p x-text="entry.pubDate"></p>
+        <p x-text="entry.contentSnippet"></p>
+      </div>
+    </template>
+  </div>
 
   <script src="static/js/main.js"></script>
 </body>
