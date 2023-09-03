@@ -11,7 +11,7 @@ const processUrl = (url, enableCors) => {
 const getApiResponse = () => {
   return new Promise((resolve, reject) => {
     let parser = new RSSParser();
-    const url = processUrl('https://www.reddit.com/.rss', true);
+    const url = processUrl('http://feeds.bbci.co.uk/news/rss.xml', true);
     parser.parseURL(url, (err, feed) => {
       if (err) {
         reject(err);
