@@ -32,6 +32,11 @@ const getRssData = function() {
         const lambda = () => {
           const limit = Math.floor(Math.random() * 5) + 1;
           this.entries = data.slice(0, limit);
+
+          // TODO: GET API RESPONSE
+          // - IF FETCH FAILS, GET FROM CACHE
+          // TODO: CACHE RESPONSE
+          // - CLEAR EVERYTHING BEFORE RE-CACHING
         };
 
         lambda();
